@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kodeeboyzz Deals — Tổng hợp Shop Chính Hãng Shopee</title>
+<meta name="description" content="Kodeeboyzz Deals tổng hợp các shop chính hãng uy tín trên Shopee: công nghệ, thời trang, gia dụng, trang sức, sách vở, crypto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/128/three.min.js"></script>
+<style>
+  :root{
+    --bg:#171B1C;
+    --bg-soft:#1E2422;
+    --card:#212826;
+    --line:#333B38;
+    --gold:#C9A227;
+    --gold-soft:#E4C766;
+    --amber:#E8A33D;
+    --teal:#2DD4BF;
+    --terracotta:#C1502E;
+    --terracotta-soft:#E07A52;
+    --forest:#3D7A4F;
+    --forest-soft:#6FAE7F;
+    --text:#F5F1E8;
+    --text-dim:#A8AEA6;
+    --radius:14px;
+
+    /* per-category accent identity */
+    --acc-tech:#4C8FD1;
+    --acc-fashion:#E8A33D;
+    --acc-home:#5FA36B;
+    --acc-books:#B9895A;
+    --acc-jewelry:#D98BA6;
+    --acc-crypto:#C1502E;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    position:relative;
+  }
+  body::before{
+    content:'';position:fixed;inset:-18%;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(36% 28% at 12% 8%, rgba(199,58,42,.30), transparent 70%),
+      radial-gradient(30% 24% at 78% -4%, rgba(255,138,26,.26), transparent 70%),
+      radial-gradient(40% 32% at 92% 18%, rgba(230,175,52,.32), transparent 70%),
+      radial-gradient(46% 36% at 50% 102%, rgba(52,124,78,.30), transparent 70%),
+      radial-gradient(28% 24% at 48% 46%, rgba(45,212,191,.10), transparent 70%);
+    filter:blur(46px) saturate(125%) hue-rotate(0deg);
+    animation:auroraShift 26s cubic-bezier(.45,.05,.55,.95) infinite alternate,
+              auroraHue 40s ease-in-out infinite alternate;
+    will-change:transform,filter;
+  }
+  body::after{
+    content:'';position:fixed;inset:-30%;z-index:0;pointer-events:none;
+    background:conic-gradient(from 0deg at 50% 50%,
+      transparent 0deg, rgba(228,199,102,.05) 60deg, transparent 130deg,
+      rgba(45,212,191,.045) 200deg, transparent 270deg, rgba(199,58,42,.04) 330deg, transparent 360deg);
+    animation:sheenRotate 70s linear infinite;
+    mix-blend-mode:screen;
+  }
+  @keyframes auroraShift{
+    0%{transform:translate3d(0,0,0) scale(1) rotate(0deg);}
+    25%{transform:translate3d(-3%,2%,0) scale(1.05) rotate(1.2deg);}
+    50%{transform:translate3d(-1%,4%,0) scale(1.08) rotate(-0.6deg);}
+    75%{transform:translate3d(2.5%,-2%,0) scale(1.04) rotate(0.8deg);}
+    100%{transform:translate3d(1.5%,-3%,0) scale(1.02) rotate(-1deg);}
+  }
+  @keyframes auroraHue{
+    0%{filter:blur(46px) saturate(125%) hue-rotate(0deg);}
+    50%{filter:blur(50px) saturate(140%) hue-rotate(10deg);}
+    100%{filter:blur(46px) saturate(125%) hue-rotate(-6deg);}
+  }
+  @keyframes sheenRotate{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+  }
+  @media(prefers-reduced-motion:reduce){body::before,body::after{animation:none;}}
+  h1,h2,h3{font-family:'Playfair Display',serif;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  /* ===== NAV ===== */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(21,27,36,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1200px;margin:0 auto;padding:16px 24px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;
+  }
+  .logo{
+    font-family:'Playfair Display',serif;
+    font-size:20px;font-weight:800;
+    display:flex;align-items:center;gap:8px;
+    letter-spacing:0.3px;
+  }
+  .logo .mark{
+    width:30px;height:30px;border-radius:8px;
+    background:linear-gradient(135deg,var(--gold),var(--teal));
+    display:flex;align-items:center;justify-content:center;
+    font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:#0B0F14;
+  }
+  .navlinks{display:flex;gap:22px;font-size:14px;color:var(--text-dim);}
+  .navlinks a{transition:color .2s;}
+  .navlinks a:hover{color:var(--gold-soft);}
+  .navlinks{display:none;}
+  @media(min-width:820px){.navlinks{display:flex;}}
+
+  /* ===== HERO ===== */
+  .hero{
+    max-width:1200px;margin:0 auto;padding:72px 24px 56px;
+    display:grid;gap:40px;
+  }
+  @media(min-width:900px){.hero{grid-template-columns:1.1fr .9fr;align-items:center;padding:96px 24px 72px;}}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;
+    color:var(--gold-soft);text-transform:uppercase;
+    border:1px solid var(--line);padding:6px 12px;border-radius:999px;
+    margin-bottom:20px;
+  }
+  .eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);}
+  .hero h1{
+    font-size:clamp(34px,5vw,56px);font-weight:800;line-height:1.08;
+    margin-bottom:18px;
+  }
+  .hero h1 em{font-style:normal;color:var(--gold-soft);}
+  .hero p{color:var(--text-dim);font-size:16px;max-width:46ch;margin-bottom:28px;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:13px 22px;border-radius:10px;font-weight:600;font-size:14px;
+    transition:transform .18s ease, box-shadow .18s ease;
+    cursor:pointer;border:none;
+  }
+  .btn-primary{background:var(--gold);color:#14100a;}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px -8px rgba(201,162,39,.5);}
+  .btn-ghost{border:1px solid var(--line);color:var(--text);}
+  .btn-ghost:hover{border-color:var(--gold-soft);color:var(--gold-soft);}
+
+  /* signature 3D visual */
+  .signature-figure{display:flex;flex-direction:column;align-items:center;gap:18px;}
+  .compass{
+    position:relative;aspect-ratio:1;max-width:340px;width:100%;margin:0 auto;
+    border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, #263140, #151B24 70%);
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .compass::before{
+    content:'';position:absolute;inset:14px;border-radius:50%;
+    border:1px dashed var(--line);
+  }
+  .compass-core{
+    font-family:'Playfair Display',serif;font-weight:800;font-size:15px;
+    color:var(--gold-soft);text-align:center;line-height:1.6;
+    letter-spacing:.05em;text-transform:uppercase;
+    pointer-events:none;
+    text-shadow:0 2px 12px rgba(0,0,0,.5);
+  }
+  #hero3d-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:1;filter:drop-shadow(0 0 24px rgba(201,162,39,.35)) drop-shadow(0 0 40px rgba(45,212,191,.15));}
+  .compass-core span{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-dim);letter-spacing:.2em;text-transform:none;margin-top:4px;}
+  .compass-tick{position:absolute;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-dim);}
+  .t-n{top:8px;left:50%;transform:translateX(-50%);}
+  .t-s{bottom:8px;left:50%;transform:translateX(-50%);}
+  .t-e{right:8px;top:50%;transform:translateY(-50%);}
+  .t-w{left:8px;top:50%;transform:translateY(-50%);}
+
+  /* ===== LIVE STATUS BAR ===== */
+  .status-bar{max-width:1200px;margin:0 auto 28px;padding:0 24px;}
+  .status-inner{
+    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px 28px;
+    padding:16px 22px;border:1px solid var(--line);border-radius:16px;
+    background:linear-gradient(90deg, rgba(255,255,255,.02), rgba(255,255,255,.005));
+  }
+  .status-item{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--text-dim);white-space:nowrap;}
+  .status-dot{
+    width:8px;height:8px;border-radius:50%;background:#4ADE80;flex-shrink:0;
+    box-shadow:0 0 0 0 rgba(74,222,128,.6);
+    animation:statusPulse 2s ease-out infinite;
+  }
+  @keyframes statusPulse{
+    0%{box-shadow:0 0 0 0 rgba(74,222,128,.55);}
+    70%{box-shadow:0 0 0 8px rgba(74,222,128,0);}
+    100%{box-shadow:0 0 0 0 rgba(74,222,128,0);}
+  }
+  .status-stats{display:flex;gap:28px;flex-wrap:wrap;}
+  .stat{display:flex;flex-direction:column;align-items:center;min-width:64px;}
+  .stat strong{font-family:'Playfair Display',serif;font-size:20px;color:var(--gold-soft);line-height:1.1;}
+  .stat span{font-size:11px;color:var(--text-dim);margin-top:2px;white-space:nowrap;}
+  .status-updated{font-size:11px;color:var(--text-dim);font-family:'JetBrains Mono',monospace;white-space:nowrap;}
+  @media(max-width:640px){
+    .status-inner{justify-content:center;text-align:center;}
+    .status-stats{justify-content:center;width:100%;}
+  }
+
+  /* ===== OFFICIAL SHOPEE BANNER ===== */
+  .official-banner{
+    max-width:1200px;margin:0 auto 32px;padding:16px 24px;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    background:linear-gradient(90deg, rgba(201,162,39,.14), rgba(45,212,191,.10));
+    border:1px solid rgba(201,162,39,.35);border-radius:999px;
+    position:relative;overflow:hidden;
+    transition:transform .3s ease, border-color .3s ease;
+  }
+  .official-banner:hover{transform:translateY(-2px);border-color:var(--gold);}
+  .official-banner::before{
+    content:'';position:absolute;top:0;left:-40%;width:40%;height:100%;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent);
+    animation:shimmer 3.5s ease-in-out infinite;
+  }
+  @keyframes shimmer{
+    0%{left:-40%;}
+    60%,100%{left:110%;}
+  }
+  .official-badge{
+    background:var(--gold);color:#14100a;font-weight:700;font-size:12px;
+    padding:5px 12px;border-radius:999px;flex-shrink:0;
+    font-family:'JetBrains Mono',monospace;letter-spacing:.02em;
+  }
+  .official-text{color:var(--text);font-size:14px;font-weight:500;flex:1;min-width:180px;}
+  .official-arrow{color:var(--gold-soft);font-size:13px;font-weight:700;white-space:nowrap;}
+  @media(max-width:600px){.official-banner{border-radius:var(--radius);}}
+
+  /* ===== CATEGORY NAV STRIP ===== */
+  .catstrip{
+    max-width:1200px;margin:0 auto;padding:0 24px 8px;
+    display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;
+  }
+  .catstrip::-webkit-scrollbar{display:none;}
+  .catchip{
+    flex:0 0 auto;padding:10px 16px;border-radius:999px;
+    border:1px solid var(--line);font-size:13px;font-weight:600;
+    color:var(--text-dim);white-space:nowrap;transition:.2s;
+  }
+  .catchip:hover, .catchip.active{border-color:var(--gold);color:var(--gold-soft);background:rgba(201,162,39,.08);}
+
+  /* ===== SECTIONS ===== */
+  .section{max-width:1200px;margin:0 auto;padding:64px 24px 8px;}
+  .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:28px;flex-wrap:wrap;}
+  .section-head .num{
+    font-family:'JetBrains Mono',monospace;color:var(--gold-soft);font-size:13px;margin-bottom:6px;display:block;
+  }
+  #tech .section-head .num{color:var(--acc-tech);}
+  #fashion .section-head .num{color:var(--acc-fashion);}
+  #home .section-head .num{color:var(--acc-home);}
+  #books .section-head .num{color:var(--acc-books);}
+  #jewelry .section-head .num{color:var(--acc-jewelry);}
+  #crypto .section-head .num{color:var(--acc-crypto);}
+  .section-head h2{font-size:clamp(24px,3vw,32px);}
+  .section-head p{color:var(--text-dim);font-size:14px;max-width:50ch;}
+
+  .shop-grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;
+  }
+  .shop-grid[data-category="tech"]{--accent:var(--acc-tech);}
+  .shop-grid[data-category="fashion"]{--accent:var(--acc-fashion);}
+  .shop-grid[data-category="home"]{--accent:var(--acc-home);}
+  .shop-grid[data-category="books"]{--accent:var(--acc-books);}
+  .shop-grid[data-category="jewelry"]{--accent:var(--acc-jewelry);}
+  .shop-grid[data-category="crypto"]{--accent:var(--acc-crypto);}
+
+  .shop-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;display:flex;flex-direction:column;gap:14px;
+    transition:box-shadow .35s ease, border-color .35s ease, transform .5s cubic-bezier(.2,.8,.2,1);
+    opacity:0;transform:translateY(18px);
+    position:relative;overflow:hidden;
+    transform-style:preserve-3d;will-change:transform;
+  }
+  .shop-card.in-view{opacity:1;}
+  .shop-card.tilting{transition:box-shadow .35s ease, border-color .35s ease;}
+  .shop-card::after{
+    content:'';position:absolute;inset:0;border-radius:inherit;
+    background:radial-gradient(120px 80px at var(--mx,50%) var(--my,0%), color-mix(in srgb, var(--accent, var(--gold)) 55%, transparent), transparent 70%);
+    opacity:0;transition:opacity .3s ease;pointer-events:none;
+  }
+  .shop-card:hover::after{opacity:1;}
+  .shop-card:hover{
+    transform:translateY(-6px);
+    border-color:var(--accent, var(--gold));
+    box-shadow:0 18px 40px -20px color-mix(in srgb, var(--accent, var(--gold)) 55%, transparent);
+  }
+
+  /* ===== TECH — sharp, technical ===== */
+  .shop-grid[data-category="tech"] .shop-card{border-radius:8px;border-left:3px solid color-mix(in srgb, var(--accent) 60%, var(--line));}
+  .shop-grid[data-category="tech"] .shop-logo{border-radius:6px;}
+
+  /* ===== FASHION — soft, editorial ===== */
+  .shop-grid[data-category="fashion"] .shop-card{border-radius:22px;padding-top:26px;}
+  .shop-grid[data-category="fashion"] .shop-card::before{
+    content:'';position:absolute;top:0;left:16px;right:16px;height:3px;border-radius:0 0 4px 4px;
+    background:linear-gradient(90deg, var(--accent), transparent);
+  }
+  .shop-grid[data-category="fashion"] .shop-logo{border-radius:50%;}
+  .shop-grid[data-category="fashion"] .shop-card h3{font-family:'Playfair Display',serif;font-weight:600;font-style:italic;}
+
+  /* ===== HOME — organic, kraft ===== */
+  .shop-grid[data-category="home"] .shop-card{border-radius:16px;border-style:dashed;border-color:color-mix(in srgb, var(--accent) 40%, var(--line));}
+  .shop-grid[data-category="home"] .shop-card:hover{border-style:solid;}
+  .shop-grid[data-category="home"] .shop-logo{border-radius:50%;}
+
+  /* ===== BOOKS — spine ===== */
+  .shop-grid[data-category="books"] .shop-card{border-radius:4px 12px 12px 4px;border-left:6px solid var(--accent);padding-left:19px;}
+  .shop-grid[data-category="books"] .shop-logo{border-radius:2px;width:44px;height:60px;}
+  .shop-grid[data-category="books"] .shop-card h3{font-family:'Playfair Display',serif;}
+
+  /* ===== JEWELRY — elegant shimmer ===== */
+  .shop-grid[data-category="jewelry"] .shop-card{border-radius:18px;border-color:color-mix(in srgb, var(--accent) 45%, var(--line));padding:26px 22px;}
+  .shop-grid[data-category="jewelry"] .shop-card::before{
+    content:'';position:absolute;inset:0;border-radius:inherit;padding:1px;
+    background:linear-gradient(135deg, var(--accent), transparent 40%, transparent 60%, var(--accent));
+    -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;
+    opacity:.5;pointer-events:none;
+  }
+  .shop-grid[data-category="jewelry"] .shop-logo{border-radius:50%;}
+
+  /* ===== CRYPTO — terminal / ticker ===== */
+  .shop-grid[data-category="crypto"] .shop-card{border-radius:6px;background:#161A16;}
+  .shop-grid[data-category="crypto"] .shop-card h3{font-family:'JetBrains Mono',monospace;letter-spacing:.02em;}
+  .shop-grid[data-category="crypto"] .shop-logo{border-radius:6px;}
+  .shop-grid[data-category="crypto"] .shop-desc{font-family:'JetBrains Mono',monospace;font-size:12px;}
+
+  .shop-logo{
+    width:52px;height:52px;border-radius:12px;
+    background:linear-gradient(135deg,var(--bg-soft),#293240);
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Playfair Display',serif;font-weight:700;font-size:16px;color:var(--gold-soft);
+    letter-spacing:0.5px;
+    transition:transform .4s cubic-bezier(.2,.8,.2,1), background .35s ease, border-color .35s ease;
+    overflow:hidden;padding:8px;
+    flex-shrink:0;
+  }
+  .shop-logo img{width:100%;height:100%;object-fit:contain;}
+  .shop-logo svg{width:64%;height:64%;filter:drop-shadow(0 3px 5px rgba(0,0,0,.4));}
+  .shop-logo.has-logo{background:#F3F1EC!important;padding:10px;border-color:#00000010;}
+  .shop-logo.has-logo:hover, .shop-card:hover .shop-logo.has-logo{background:#FFFFFF!important;}
+  .shop-card:hover .shop-logo{
+    transform:rotate(-6deg) scale(1.08);
+    background:linear-gradient(135deg, var(--accent, var(--gold)), var(--teal));
+    color:#14100a;border-color:transparent;
+  }
+  .shop-card h3{font-size:17px;font-family:'Inter',sans-serif;font-weight:700;}
+  .shop-tag{
+    font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--teal);
+    text-transform:uppercase;letter-spacing:.08em;
+  }
+  .shop-desc{color:var(--text-dim);font-size:13px;flex:1;}
+  .featured{display:flex;flex-direction:column;gap:6px;margin-top:-4px;}
+  .featured a{
+    font-size:12px;color:var(--teal);border-top:1px solid var(--line);
+    padding-top:8px;display:flex;justify-content:space-between;gap:8px;
+    transition:color .2s ease, padding-left .2s ease;
+  }
+  .featured a:hover{color:var(--gold-soft);padding-left:4px;}
+  .featured .fp-price{color:var(--text-dim);white-space:nowrap;}
+  .shop-card .btn{width:100%;justify-content:center;font-size:13px;padding:11px;position:relative;z-index:1;}
+  @media(prefers-reduced-motion:reduce){
+    .shop-card{opacity:1;transform:none!important;}
+  }
+
+  .empty-note{
+    grid-column:1/-1;border:1px dashed var(--line);border-radius:var(--radius);
+    padding:24px;color:var(--text-dim);font-size:13px;text-align:center;
+  }
+
+  /* ===== FOOTER ===== */
+  footer{
+    margin-top:96px;border-top:1px solid var(--line);
+    padding:40px 24px;color:var(--text-dim);font-size:13px;
+  }
+  .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+  .footer-inner a{color:var(--text-dim);}
+  .footer-inner a:hover{color:var(--gold-soft);}
+
+  ::selection{background:var(--gold);color:#14100a;}
+  :focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+
+  /* floating ambient orbs */
+  .orb{
+    position:fixed;border-radius:50%;filter:blur(2px);pointer-events:none;
+    z-index:0;opacity:.55;mix-blend-mode:screen;
+    animation:float 14s ease-in-out infinite;
+  }
+  .orb1{width:10px;height:10px;background:var(--amber);top:18%;left:8%;box-shadow:0 0 20px 6px rgba(232,163,61,.5);animation-duration:16s;}
+  .orb2{width:7px;height:7px;background:var(--forest-soft);top:32%;right:12%;box-shadow:0 0 16px 5px rgba(111,174,127,.5);animation-duration:12s;animation-delay:-3s;}
+  .orb3{width:9px;height:9px;background:var(--terracotta-soft);top:62%;left:20%;box-shadow:0 0 18px 6px rgba(224,122,82,.45);animation-duration:18s;animation-delay:-7s;}
+  .orb4{width:6px;height:6px;background:var(--gold-soft);top:75%;right:22%;box-shadow:0 0 14px 5px rgba(228,199,102,.45);animation-duration:15s;animation-delay:-5s;}
+  .orb5{width:8px;height:8px;background:var(--forest-soft);top:48%;left:48%;box-shadow:0 0 16px 5px rgba(111,174,127,.4);animation-duration:20s;animation-delay:-9s;}
+  @keyframes float{
+    0%,100%{transform:translate3d(0,0,0);}
+    25%{transform:translate3d(18px,-24px,0);}
+    50%{transform:translate3d(-14px,-10px,0);}
+    75%{transform:translate3d(10px,16px,0);}
+  }
+  main,header,footer{position:relative;z-index:1;}
+  @media(prefers-reduced-motion:reduce){.orb{animation:none;}}
+
+  :focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;}}
+/* ========== HAMBURGER MENU + OVERLAY + MOBILE OPTIMIZATION ========== */
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 60;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  margin: 3px 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Overlay Nền Tối */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(5px);
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile Menu */
+@media (max-width: 820px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .navlinks {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 260px;
+    height: calc(100vh - 70px);
+    background: rgba(23, 27, 28, 0.98);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    padding: 30px 24px;
+    gap: 22px;
+    transition: right 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    border-left: 1px solid var(--line);
+    z-index: 55;
+  }
+  
+  .navlinks.active {
+    right: 0;
+  }
+  
+  .navlinks a {
+    font-size: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px 20px;
+  }
+  
+  .threeD-section {
+    margin: 50px auto 35px;
+    padding: 0 16px;
+  }
+
+  #threeD-canvas {
+    height: 420px !important;
+  }
+  
+  .threeD-controls {
+    padding: 14px 18px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .threeD-controls .left {
+    justify-content: center;
+  }
+  
+  .threeD-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  .shop-card {
+    padding: 20px;
+  }
+  
+  .shop-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  h1 {
+    font-size: 32px !important;
+    line-height: 1.15 !important;
+  }
+  
+  h2 {
+    font-size: 24px !important;
+    line-height: 1.25 !important;
+  }
+
+  .threeD-header h2 {
+    font-size: 26px !important;
+  }
+
+  .threeD-header p {
+    font-size: 14.5px;
+  }
+
+  .hero {
+    padding: 70px 20px 55px;
+    text-align: center;
+  }
+  
+  .hero-cta {
+    justify-content: center;
+  }
+
+  footer {
+    padding: 45px 20px 35px;
+  }
+  
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #threeD-canvas {
+    height: 380px !important;
+  }
+  
+  .shop-card {
+    padding: 18px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+<div class="orb orb4"></div>
+<div class="orb orb5"></div>
+
+
+<header>
+  <div class="nav-inner">
+    <a href="#top" class="logo"><span class="mark">K</span>Kodeeboyzz <span style="color:var(--gold-soft)">Deals</span></a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#tech">Công nghệ</a>
+      <a href="#fashion">Thời trang</a>
+      <a href="#home">Gia dụng</a>
+      <a href="#books">Sách</a>
+      <a href="#jewelry">Trang sức</a>
+      <a href="#crypto">Crypto</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navlinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<main id="top">
+
+  <section class="hero">
+    <div>
+      <span class="eyebrow">Shopee Affiliate Hub</span>
+      <h1>Mọi shop chính hãng,<br><em>một điểm đến.</em></h1>
+      <p>Kodeeboyzz Deals tổng hợp các shop uy tín trên Shopee Mall — công nghệ, thời trang, âm thanh, gia dụng — để bạn mua đúng hàng chính hãng, giá tốt, không cần tìm kiếm lung tung.</p>
+      <div class="hero-cta">
+        <a href="#tech" class="btn btn-primary">Khám phá shop →</a>
+        <a href="#" class="btn btn-ghost">Về Kodeeboyzz</a>
+      </div>
+    </div>
+    <div class="signature-figure">
+      <div class="compass" id="hero3d" aria-hidden="true">
+        <canvas id="hero3d-canvas"></canvas>
+      </div>
+      <div class="compass-core">Kodeeboyzz<span>SIGNATURE MARK</span></div>
+    </div>
+  </section>
+
+  <!-- ============ LIVE STATUS / ABOUT ============ -->
+  <section class="status-bar" aria-label="Trạng thái hoạt động">
+    <div class="status-inner">
+      <div class="status-item">
+        <span class="status-dot"></span>
+        <span>Đang cập nhật trực tiếp</span>
+      </div>
+      <div class="status-stats">
+        <div class="stat"><strong id="stat-shops">0</strong><span>shop đã duyệt</span></div>
+        <div class="stat"><strong id="stat-categories">0</strong><span>ngành hàng</span></div>
+        <div class="stat"><strong id="stat-featured">0</strong><span>deal nổi bật</span></div>
+      </div>
+      <span class="status-updated" id="status-updated"></span>
+    </div>
+  </section>
+
+  <a href="https://s.shopee.vn/gOBspgmMC" target="_blank" rel="noopener sponsored" class="official-banner">
+    <span class="official-badge">✓ Chính thức</span>
+    <span class="official-text">Kênh Shopee chính thức của Kodeeboyzz — theo dõi để nhận deal sớm nhất</span>
+    <span class="official-arrow">Ghé shop →</span>
+  </a>
+
+  <!-- ============ KODEEBOYZZ SIGNATURE 3D ============ -->
+  <section class="threeD-section">
+    <div class="threeD-header">
+      <span class="eyebrow">Kodeeboyzz Signature</span>
+      <h2>Khám phá sản phẩm<br>trong không gian ba chiều</h2>
+      <p>Tương tác mượt mà • Chọn màu Đỏ - Vàng - Xanh • Cảm nhận như sản phẩm thật</p>
+    </div>
+
+    <div class="threeD-container">
+      <canvas id="threeD-canvas"></canvas>
+
+      <div class="threeD-controls">
+        <div class="left">
+          <button id="autoRotateBtn" class="threeD-btn active">Auto Rotate</button>
+          <button id="resetBtn" class="threeD-btn">Reset View</button>
+        </div>
+        <div class="color-swatches">
+          <div class="swatch black active" data-color="black" title="Matte Black"></div>
+          <div class="swatch gold" data-color="gold" title="Gold Edition"></div>
+          <div class="swatch green" data-color="green" title="Forest Green"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="threeD-footer">
+      Mô hình cao cấp • Dành cho tai nghe Sony, Harman Kardon và các thương hiệu premium
+    </div>
+  </section>
+
+  <nav class="catstrip" aria-label="Danh mục nhanh">
+    <a class="catchip" href="#tech">📱 Công nghệ</a>
+    <a class="catchip" href="#fashion">👟 Thời trang</a>
+    <a class="catchip" href="#home">🍳 Gia dụng</a>
+    <a class="catchip" href="#books">📚 Sách</a>
+    <a class="catchip" href="#jewelry">💍 Trang sức</a>
+    <a class="catchip" href="#crypto">🪙 Crypto</a>
+  </nav>
+
+  <!-- ============ TECH ============ -->
+  <section class="section" id="tech">
+    <div class="section-head">
+      <div>
+        <span class="num">01 — Công nghệ</span>
+        <h2>Điện thoại &amp; thiết bị</h2>
+        <p>iPhone, Samsung, Xiaomi và các shop chính hãng khác.</p>
+      </div>
+    </div>
+    <div class="shop-grid" data-category="tech"></div>
+  </section>
+
+  <!-- ============ FASHION ============ -->
+  <section class="section" id="fashion">
+    <div class="section-head">
+      <div>
+        <span class="num">02 — Thời trang</span>
+        <h2>Giày dép &amp; sneaker</h2>
+        <p>Adidas, Nike, Vans, Converse chính hãng.</p>
+      </div>
+    </div>
+    <div class="shop-grid" data-category="fashion"></div>
+  </section>
+
+  <!-- ============ HOME ============ -->
+  <section class="section" id="home">
+    <div class="section-head">
+      <div>
+        <span class="num">03 — Gia dụng</span>
+        <h2>Dụng cụ nhà bếp</h2>
+        <p>Đồ bếp, gia dụng chính hãng.</p>
+      </div>
+    </div>
+    <div class="shop-grid" data-category="home"></div>
+  </section>
+
+  <!-- ============ BOOKS ============ -->
+  <section class="section" id="books">
+    <div class="section-head">
+      <div>
+        <span class="num">04 — Sách &amp; văn phòng phẩm</span>
+        <h2>Sách, đồ dùng học tập</h2>
+        <p>Nhà sách, văn phòng phẩm chính hãng.</p>
+      </div>
+    </div>
+    <div class="shop-grid" data-category="books"></div>
+  </section>
+
+  <!-- ============ JEWELRY ============ -->
+  <section class="section" id="jewelry">
+    <div class="section-head">
+      <div>
+        <span class="num">05 — Trang sức</span>
+        <h2>Vàng bạc &amp; đá quý</h2>
+        <p>Trang sức bạc, kim cương, ngọc trai chính hãng.</p>
+      </div>
+    </div>
+    <div class="shop-grid" data-category="jewelry"></div>
+  </section>
+
+  <!-- ============ CRYPTO ============ -->
+  <section class="section" id="crypto">
+    <div class="section-head">
+      <div>
+        <span class="num">06 — Sàn giao dịch</span>
+        <h2>Crypto &amp; đầu tư</h2>
+        <p>Sàn giao dịch uy tín, đăng ký qua link giới thiệu. Đây là công cụ đầu tư, không phải lời khuyên tài chính — tự nghiên cứu trước khi tham gia.</p>
+      </div>
+    </div>
+    <div class="shop-grid" data-category="crypto"></div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Kodeeboyzz Deals. Tổng hợp shop affiliate Shopee.</span>
+    <span><a href="#top">Về đầu trang ↑</a></span>
+  </div>
+</footer>
+
+<script>
+const shopsData = {
+  tech: [
+    {name:"Apple Flagship Store", desc:"Hệ sinh thái Apple nguyên bản — nơi thiết kế và trải nghiệm hội tụ.", url:"https://s.shopee.vn/6L2Z00A4PA", logo:"https://logo.clearbit.com/apple.com"},
+    {name:"SAMSUNG OFFICIAL STORE", desc:"Công nghệ Samsung chính hãng, dẫn đầu xu hướng di động toàn cầu.", url:"https://s.shopee.vn/9zvrKmAGOx", logo:"https://logo.clearbit.com/samsung.com"},
+    {name:"Xiaomi Vietnam Brand Store", desc:"Xiaomi chính hãng — hiệu năng vượt trội, mức giá thông minh.", url:"https://s.shopee.vn/80AmxDoJej", logo:"https://logo.clearbit.com/mi.com",
+      featured:[{name:"Máy tính bảng Redmi Pad 2 4GB/128GB",price:"5.419.000₫",url:"https://s.shopee.vn/903KAlhllK"}]},
+    {name:"Xiaomi Official Store", desc:"Không gian Xiaomi chính hãng, cập nhật liên tục sản phẩm mới.", url:"https://s.shopee.vn/18VQZv9ov", logo:"https://logo.clearbit.com/mi.com"},
+    {name:"Xiaomi Official Store Vietnam", desc:"Không gian Xiaomi chính hãng, cập nhật liên tục sản phẩm mới.", url:"https://s.shopee.vn/5Aqba6B2RE", logo:"https://logo.clearbit.com/mi.com"},
+    {name:"Xiaomi Mobile Authorized Store", desc:"Đại lý ủy quyền Xiaomi — bảo hành minh bạch, nguồn hàng đảm bảo.", url:"https://s.shopee.vn/50XBNoxK09", logo:"https://logo.clearbit.com/mi.com"},
+    {name:"MI Mall VN", desc:"Trọn hệ sinh thái Xiaomi, đồng bộ mọi thiết bị trong đời sống số.", url:"https://s.shopee.vn/80AmxMp0lt", logo:"https://logo.clearbit.com/mi.com"},
+    {name:"MiZone Store Việt Nam", desc:"Trọn hệ sinh thái Xiaomi, đồng bộ mọi thiết bị trong đời sống số.", url:"https://s.shopee.vn/5AqbaBD8vB", logo:"https://logo.clearbit.com/mi.com"},
+    {name:"OPPO Brand Store", desc:"OPPO chính hãng — thiết kế tinh tế, camera đẳng cấp.", url:"https://s.shopee.vn/80AmxaKoWu", logo:"https://logo.clearbit.com/oppo.com"},
+    {name:"HONOR Official Store", desc:"HONOR chính hãng, lựa chọn của thế hệ số hóa mới.", url:"https://s.shopee.vn/2VpqPWzVXE", logo:"https://logo.clearbit.com/hihonor.com"},
+    {name:"LG Brand Shop", desc:"LG chính hãng — công nghệ Hàn Quốc, độ bền theo thời gian.", url:"https://s.shopee.vn/9KgAY9kJxD", logo:"https://logo.clearbit.com/lg.com"},
+    {name:"MSI Laptop Store", desc:"MSI chính hãng — sức mạnh gaming cho dân chuyên nghiệp.", url:"https://s.shopee.vn/9pcR96mUT3", logo:"https://logo.clearbit.com/msi.com"},
+    {name:"Sony Store Online", desc:"Âm thanh Sony chính hãng — chuẩn mực nghe nhìn cao cấp.", url:"https://s.shopee.vn/8KndLfeVRi", logo:"https://logo.clearbit.com/sony.com"},
+    {name:"GEFORCE STORE", desc:"NVIDIA GeForce chính hãng — sức mạnh đồ họa đỉnh cao.", url:"https://s.shopee.vn/8fQTlsHbMD", logo:"https://logo.clearbit.com/nvidia.com"},
+    {name:"DJI OFFICIAL STORE", desc:"DJI chính hãng — công nghệ bay chụp hàng đầu thế giới.", url:"https://s.shopee.vn/8V73a7y7Ix", logo:"https://logo.clearbit.com/dji.com"},
+    {name:"Lexar Việt Nam Store", desc:"Lexar chính hãng — lưu trữ tốc độ cao, bền bỉ theo năm tháng.", url:"https://s.shopee.vn/9AMkMgvA18", logo:"https://logo.clearbit.com/lexar.com"},
+    {name:"GoojodoqMall.VN", desc:"Phụ kiện công nghệ tuyển chọn, đa dạng cho mọi nhu cầu.", url:"https://s.shopee.vn/7VEWN03zX7"},
+    {name:"PHONG VU PREMIUM STORE", desc:"Phong Vũ — hệ thống laptop, PC chính hãng quy mô toàn quốc.", url:"https://s.shopee.vn/AKYhkAu0sC", logo:"https://logo.clearbit.com/phongvu.vn"},
+    {name:"Hoàng Hà Mobile Official Store", desc:"Thiết bị di động chính hãng, giá cạnh tranh trên toàn hệ thống.", url:"https://s.shopee.vn/1gGjQecUgD", logo:"https://logo.clearbit.com/hoanghamobile.com"},
+    {name:"FPTShop", desc:"FPT Shop — hệ thống bán lẻ công nghệ uy tín hàng đầu Việt Nam.", url:"https://s.shopee.vn/4fuL0BvT1e", logo:"https://logo.clearbit.com/fptshop.com.vn"},
+    {name:"Viettel Store - AAR", desc:"Viettel Store — mạng lưới bán lẻ công nghệ phủ khắp cả nước.", url:"https://s.shopee.vn/2g9GcgCvcX", logo:"https://logo.clearbit.com/viettelstore.vn"},
+    {name:"Nguyễn Kim Electronics", desc:"Nguyễn Kim — điện máy chính hãng, thương hiệu lâu năm được tin cậy.", url:"https://s.shopee.vn/9zvrMFZa7I", logo:"https://logo.clearbit.com/nguyenkim.com"},
+    {name:"Clickbuy Official Store", desc:"Thiết bị công nghệ tuyển lọc, cập nhật theo xu hướng mới nhất.", url:"https://s.shopee.vn/6ffPOEwdvj"},
+    {name:"Milife By ShopDunk+", desc:"Phụ kiện công nghệ chính hãng, kiểm định chất lượng nghiêm ngặt.", url:"https://s.shopee.vn/5AqbbhiwvT"},
+    {name:"iPhoto By ShopDunk", desc:"Phụ kiện nhiếp ảnh chuyên nghiệp, chuẩn hóa cho người sáng tạo.", url:"https://s.shopee.vn/9Uzan08k4o"},
+    {name:"BSMT Official Store", desc:"Phụ kiện công nghệ chính hãng, kiểm định chất lượng nghiêm ngặt.", url:"https://s.shopee.vn/5AqbcDAuwW"},
+    {name:"TopGia HCM Store", desc:"Thiết bị điện tử đa dạng, đáp ứng nhu cầu số hóa hiện đại.", url:"https://s.shopee.vn/5Aqbd5sCqx"},
+    {name:"GNTEK", desc:"Thiết bị thông minh thế hệ mới cho không gian sống hiện đại.", url:"https://s.shopee.vn/4Ay4RSvA61"},
+  ],
+  fashion: [
+    {name:"adidas Official Store", desc:"Adidas chính hãng — nơi thể thao và phong cách sống giao thoa.", url:"https://s.shopee.vn/70IFhMRazR", logo:"https://logo.clearbit.com/adidas.com",
+      featured:[
+        {name:"NY 90 Nam trắng GV8849",price:"1.805.000₫",url:"https://s.shopee.vn/1Ldsx1kWtN"},
+        {name:"VL Court Classic Burgundy JH5062",price:"1.567.500₫",url:"https://s.shopee.vn/6VLz6aIMzw"}
+      ]},
+    {name:"NewBalance Store", desc:"New Balance chính hãng — di sản thể thao Mỹ, tinh thần bền vững.", url:"https://s.shopee.vn/7prMhCCch0", logo:"https://logo.clearbit.com/newbalance.com",
+      featured:[
+        {name:"New Balance 530 Mens Classic - W",price:"2.859.000₫",url:"https://s.shopee.vn/2qSgm3NSaE"},
+        {name:"New Balance 1906A Unisex - Grey",price:"4.499.000₫",url:"https://s.shopee.vn/70IFjmWegL"}
+      ]},
+    {name:"PUMA Official Store", desc:"PUMA chính hãng — năng lượng thể thao trong từng thiết kế.", url:"https://s.shopee.vn/1Ldszeu214", logo:"https://logo.clearbit.com/puma.com",
+      featured:[
+        {name:"Caven Mix Ash Gray-White",price:"1.800.000₫",url:"https://s.shopee.vn/903K7lloxA"},
+        {name:"Áo MCFC Home Jersey Replica",price:"1.870.000₫",url:"https://s.shopee.vn/8fQTjEcTd0"}
+      ]},
+    {name:"KAMITO OFFICIAL STORE", desc:"Kamito chính hãng — đồng hành cùng làn sóng Pickleball thịnh hành 2026.", url:"https://s.shopee.vn/AAFHWCRVzO",
+      featured:[
+        {name:"Vợt Pickleball Kamito Gamma 16mm",price:"3.160.000₫",url:"https://s.shopee.vn/2BCzzWdQTs"},
+        {name:"Giày Pickleball Kamito Slide Pro",price:"1.490.000₫",url:"https://s.shopee.vn/5AqbZ4J9ch"}
+      ]},
+    {name:"Converse", desc:"Converse chính hãng — biểu tượng thời trang không tuổi.", url:"https://s.shopee.vn/8AUD94Lo6H", logo:"https://logo.clearbit.com/converse.com",
+      featured:[
+        {name:"Run Star Trainer - Egret/Black/Honey",price:"2.200.000₫",url:"https://s.shopee.vn/9pcR89obFC"},
+        {name:"CHUCK 70 HI Unisex - Black",price:"2.200.000₫",url:"https://s.shopee.vn/6VLzA3HjD6"}
+      ]},
+  ],
+  home: [
+    {name:"FUJIHOME OFFICIAL STORE", desc:"Fujihome chính hãng — nâng tầm gian bếp hiện đại mỗi ngày.", url:"https://s.shopee.vn/qhcS8uVEK"},
+    {name:"FUJIHOME AUTHENTIC", desc:"Fujihome chính hãng — nâng tầm gian bếp hiện đại mỗi ngày.", url:"https://s.shopee.vn/2g9GdYlUEO"},
+    {name:"Dao Bếp DABETO", desc:"DABETO chính hãng — dao bếp sắc bén, chuẩn tay đầu bếp chuyên nghiệp.", url:"https://s.shopee.vn/3B5XFUgCYd"},
+    {name:"T2C_Mall - Lock&Lock Chính Hãng", desc:"Lock&Lock chính hãng — giải pháp lưu trữ thông minh cho gia đình Việt.", url:"https://s.shopee.vn/3B5XFb8qob"},
+    {name:"INOCHI", desc:"INOCHI — đồ dùng gia đình tinh gọn, thiết kế theo phong cách Nhật.", url:"https://s.shopee.vn/8KndP47aYD"},
+    {name:"GIẤY POSY XÀI MÊ LI", desc:"POSY — giấy gia dụng mềm mại, an toàn cho cả gia đình.", url:"https://s.shopee.vn/qhcTFns9o"},
+    {name:"footful Supplies.vn", desc:"Văn phòng phẩm & đồ gia dụng tuyển chọn cho không gian sống gọn gàng.", url:"https://s.shopee.vn/9AMkOgcpcH"},
+    {name:"Deli Office Accessories HCM", desc:"Deli chính hãng — dụng cụ học tập, văn phòng phẩm chuẩn quốc tế.", url:"https://s.shopee.vn/BRvfvh9CU"},
+  ],
+  books: [
+    {name:"THAIHABOOKS Official Store", desc:"Thái Hà Books — lan tỏa tri thức qua từng đầu sách chọn lọc.", url:"https://s.shopee.vn/AAFHaZ30yW"},
+    {name:"Nhã Nam HCM", desc:"Nhã Nam — tinh hoa văn học trong nước và quốc tế.", url:"https://s.shopee.vn/5AqbdOzFAk"},
+    {name:"Tiệm Sách Mộc Authorised Store", desc:"Sách chính hãng đa dạng thể loại, tuyển chọn theo thị hiếu độc giả.", url:"https://s.shopee.vn/3qLE2yBGrg"},
+    {name:"Nhà Sách Loan Nguyễn", desc:"Sách chính hãng đa dạng thể loại, tuyển chọn theo thị hiếu độc giả.", url:"https://s.shopee.vn/9fJ0zlDi1R"},
+    {name:"First News Official Store", desc:"First News — sách phát triển bản thân, truyền cảm hứng sống tích cực.", url:"https://s.shopee.vn/9UzanUItiK"},
+  ],
+  jewelry: [
+    {name:"PNJ", desc:"PNJ — thương hiệu trang sức hàng đầu Việt Nam, chế tác tinh xảo.", url:"https://s.shopee.vn/7prMooFPTk", logo:"https://logo.clearbit.com/pnj.com.vn"},
+    {name:"Bảo Tín Mạnh Hải", desc:"Bảo Tín Mạnh Hải — uy tín vàng bạc gìn giữ qua nhiều thế hệ.", url:"https://s.shopee.vn/2qSgrkHOZY"},
+    {name:"Caterina Diamond Official Store", desc:"Kim cương chính hãng, kiểm định rõ ràng, ánh sáng vĩnh cửu.", url:"https://s.shopee.vn/60PidTCVVa"},
+    {name:"Tierra Diamond Jewelry", desc:"Kim cương chính hãng, kiểm định rõ ràng, ánh sáng vĩnh cửu.", url:"https://s.shopee.vn/1Ldt510R7q"},
+    {name:"Huy Thanh Jewelry", desc:"Trang sức vàng bạc chính hãng, tinh tế trong từng chi tiết.", url:"https://s.shopee.vn/70IFpNJs4j"},
+    {name:"Ngọc trai Trường Thịnh", desc:"Ngọc trai Trường Thịnh — vẻ đẹp thuần khiết từ đại dương.", url:"https://s.shopee.vn/5LA1pymisS"},
+    {name:"TuNa Silver - Trang sức bạc", desc:"Trang sức bạc thời trang, cá tính và tinh tế cho phái đẹp hiện đại.", url:"https://s.shopee.vn/3qLE3G0Hsz"},
+    {name:"KYDOPAL Trang Sức Bạc Việt", desc:"Trang sức bạc thời trang, cá tính và tinh tế cho phái đẹp hiện đại.", url:"https://s.shopee.vn/80An0wo16u"},
+  ],
+  crypto: [
+    {name:"Telegram Wallet", desc:"Ví crypto tích hợp Telegram — giao dịch P2P tức thời, tiện lợi trong tầm tay.", url:"https://t.me/wallet/start?startapp=ref-3-FMzZ_Ai_vh0"},
+    {name:"OKX", desc:"Sàn giao dịch crypto toàn cầu — nền tảng cho chiến lược DCA & Futures chuyên nghiệp.", url:"https://okx.com/join/30371839"},
+    {name:"MEXC", desc:"Đa dạng tài sản số, chi phí giao dịch tối ưu cho nhà đầu tư hiện đại.", url:"https://promote.mexc.com/r/m6Y0wntY4J"},
+  ]
+};
+
+function categoryIcon(cat){
+  const pair = catColors[cat] || ['#C9A227','#E4C766'];
+  const id = 'g-' + cat;
+  const defs = `<defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="${pair[1]}"/><stop offset="100%" stop-color="${pair[0]}"/>
+  </linearGradient></defs>`;
+
+  const icons = {
+    tech: `<svg viewBox="0 0 48 48" fill="none">${defs}
+      <rect x="14" y="14" width="20" height="20" rx="4" fill="url(#${id})"/>
+      <rect x="18" y="18" width="12" height="12" rx="2" fill="#0B0F14" fill-opacity=".35"/>
+      <rect x="18" y="18" width="12" height="5" rx="2" fill="#ffffff" fill-opacity=".22"/>
+      <g stroke="url(#${id})" stroke-width="2" stroke-linecap="round">
+        <path d="M14 20H8M14 28H8M40 20h-6M40 28h-6M20 14V8M28 14V8M20 40v-6M28 40v-6"/>
+      </g>
+    </svg>`,
+    fashion: `<svg viewBox="0 0 48 48" fill="none">${defs}
+      <path d="M8 30c0-3 2-5 5-6l9-3 4-4c1.5-1.5 3.5-2 5.5-1.2l6 2.4c2 .8 3.5 2.6 3.9 4.7l.6 3.1c.3 1.6 1.4 3 2.9 3.6l2.1.9v3.5H8v-3z" fill="url(#${id})"/>
+      <path d="M8 30c0-3 2-5 5-6l9-3 4-4c1.5-1.5 3.5-2 5.5-1.2l1.8.7c-3 1.7-5 3.4-8 5.5-4 2.8-11 4-17.3 4.3-.2-1-.1-2-.1-2z" fill="#ffffff" fill-opacity=".18"/>
+      <path d="M8 33.5h39" stroke="#0B0F14" stroke-opacity=".3" stroke-width="2"/>
+    </svg>`,
+    home: `<svg viewBox="0 0 48 48" fill="none">${defs}
+      <ellipse cx="24" cy="20" rx="13" ry="4" fill="url(#${id})" opacity=".9"/>
+      <path d="M11 20v6c0 4.5 5.8 8 13 8s13-3.5 13-8v-6" fill="url(#${id})"/>
+      <ellipse cx="24" cy="20" rx="13" ry="4" fill="#ffffff" fill-opacity=".2"/>
+      <rect x="21" y="9" width="14" height="3.5" rx="1.75" fill="url(#${id})"/>
+      <circle cx="35" cy="10.7" r="2.6" fill="url(#${id})"/>
+    </svg>`,
+    books: `<svg viewBox="0 0 48 48" fill="none">${defs}
+      <path d="M24 14c-3.5-2.2-8.5-3-14-2v22c5.5-1 10.5-.2 14 2V14z" fill="url(#${id})"/>
+      <path d="M24 14c3.5-2.2 8.5-3 14-2v22c-5.5-1-10.5-.2-14 2V14z" fill="url(#${id})" opacity=".75"/>
+      <path d="M24 14v22" stroke="#0B0F14" stroke-opacity=".35" stroke-width="1.5"/>
+      <path d="M10 12c5.5-1 10.5-.2 14 2" stroke="#ffffff" stroke-opacity=".25" stroke-width="1.5"/>
+    </svg>`,
+    jewelry: `<svg viewBox="0 0 48 48" fill="none">${defs}
+      <path d="M14 18L24 9l10 9-10 21L14 18z" fill="url(#${id})"/>
+      <path d="M14 18h20L24 9 14 18z" fill="#ffffff" fill-opacity=".28"/>
+      <path d="M18 18l6 21 6-21M14 18l4 0M34 18l-4 0" stroke="#0B0F14" stroke-opacity=".3" stroke-width="1.2"/>
+    </svg>`,
+    crypto: `<svg viewBox="0 0 48 48" fill="none">${defs}
+      <circle cx="24" cy="24" r="14" fill="url(#${id})"/>
+      <circle cx="24" cy="24" r="14" fill="none" stroke="#0B0F14" stroke-opacity=".25" stroke-width="1.5"/>
+      <circle cx="24" cy="24" r="9.5" fill="none" stroke="#ffffff" stroke-opacity=".3" stroke-width="1.3"/>
+      <ellipse cx="20" cy="17" rx="6" ry="3" fill="#ffffff" fill-opacity=".2"/>
+      <text x="24" y="29" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="13" font-weight="700" fill="#0B0F14" fill-opacity=".55">$</text>
+    </svg>`
+  };
+  return icons[cat] || icons.tech;
+}
+
+function initial(name){
+  const clean = name.replace(/OFFICIAL|STORE|Official|Store|Brand|Chính Hãng|Authorised|Authorized/gi,'').trim();
+  const words = clean.split(/\s+/).filter(Boolean);
+  if(words.length >= 2) return (words[0][0]+words[1][0]).toUpperCase();
+  return clean.slice(0,2).toUpperCase();
+}
+
+const catColors = {
+  tech:['#4C8FD1','#7DB2E8'], fashion:['#E8A33D','#F5C177'], home:['#5FA36B','#8DC99A'],
+  books:['#B9895A','#D6AC81'], jewelry:['#D98BA6','#EBB3C6'], crypto:['#C1502E','#E07A52']
+};
+
+function logoStyle(cat, i){
+  const pair = catColors[cat] || ['#C9A227','#E4C766'];
+  const angle = 135;
+  return `background:linear-gradient(${angle}deg, ${pair[0]}22, ${pair[1]}33); color:${pair[1]}; border-color:${pair[0]}55;`;
+}
+
+function handleLogoError(img, name, cat){
+  const box = img.parentElement;
+  box.classList.remove('has-logo');
+  box.style.cssText = logoStyle(cat);
+  box.innerHTML = categoryIcon(cat);
+}
+
+function renderShops(){
+  Object.keys(shopsData).forEach(cat=>{
+    const grid = document.querySelector(`.shop-grid[data-category="${cat}"]`);
+    if(!grid) return;
+    const items = shopsData[cat];
+    if(!items || items.length===0) return; // leave placeholder note as-is
+    grid.innerHTML = items.map(shop=>`
+      <div class="shop-card">
+        <div class="shop-logo ${shop.logo ? 'has-logo' : ''}" style="${!shop.logo ? logoStyle(cat) : ''}">${shop.logo ? `<img src="${shop.logo}" alt="${shop.name} logo" onerror="handleLogoError(this,'${shop.name.replace(/'/g,"\\'")}','${cat}')">` : categoryIcon(cat)}</div>
+        <h3>${shop.name}</h3>
+        <p class="shop-desc">${shop.desc||''}</p>
+        ${shop.featured ? `<div class="featured">${shop.featured.map(f=>`<a href="${f.url}" target="_blank" rel="noopener sponsored"><span>${f.name}</span><span class="fp-price">${f.price}</span></a>`).join('')}</div>` : ''}
+        <a href="${shop.url}" target="_blank" rel="noopener sponsored" class="btn btn-primary">Xem shop chính hãng →</a>
+      </div>
+    `).join('');
+  });
+}
+renderShops();
+
+// live status stats — computed from real data, not hardcoded
+(function updateStats(){
+  let totalShops = 0, totalFeatured = 0, activeCats = 0;
+  Object.values(shopsData).forEach(list=>{
+    if(list && list.length){
+      activeCats++;
+      totalShops += list.length;
+      list.forEach(s=>{ if(s.featured) totalFeatured += s.featured.length; });
+    }
+  });
+  const elShops = document.getElementById('stat-shops');
+  const elCats = document.getElementById('stat-categories');
+  const elFeatured = document.getElementById('stat-featured');
+  const elUpdated = document.getElementById('status-updated');
+  if(elShops) elShops.textContent = totalShops;
+  if(elCats) elCats.textContent = activeCats;
+  if(elFeatured) elFeatured.textContent = totalFeatured;
+  if(elUpdated){
+    const d = new Date();
+    elUpdated.textContent = 'Cập nhật: ' + d.toLocaleDateString('vi-VN');
+  }
+})();
+
+// hamburger mobile menu
+(function mobileMenu(){
+  const hamburger = document.getElementById('hamburger');
+  const navlinks = document.getElementById('navlinks');
+  const overlay = document.getElementById('menuOverlay');
+  if(!hamburger || !navlinks || !overlay) return;
+
+  function openMenu(){
+    hamburger.classList.add('active');
+    navlinks.classList.add('active');
+    overlay.classList.add('active');
+    hamburger.setAttribute('aria-expanded','true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu(){
+    hamburger.classList.remove('active');
+    navlinks.classList.remove('active');
+    overlay.classList.remove('active');
+    hamburger.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+  }
+  hamburger.addEventListener('click', ()=>{
+    hamburger.classList.contains('active') ? closeMenu() : openMenu();
+  });
+  overlay.addEventListener('click', closeMenu);
+  navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeMenu(); });
+  window.addEventListener('resize', ()=>{ if(window.innerWidth > 820) closeMenu(); });
+})();
+
+// scroll reveal
+const revealObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('in-view');
+      e.target.style.transform = 'translateY(0)';
+      revealObserver.unobserve(e.target);
+    }
+  });
+},{threshold:0.15});
+document.querySelectorAll('.shop-card').forEach((card,i)=>{
+  card.style.transitionDelay = `${(i%4)*60}ms`;
+  revealObserver.observe(card);
+});
+
+// 3D tilt + mouse-follow glow on cards
+document.querySelectorAll('.shop-card').forEach(card=>{
+  const MAX_TILT = 7;
+  card.addEventListener('mousemove', (e)=>{
+    const r = card.getBoundingClientRect();
+    const px = (e.clientX-r.left)/r.width;
+    const py = (e.clientY-r.top)/r.height;
+    card.style.setProperty('--mx', `${px*100}%`);
+    card.style.setProperty('--my', `${py*100}%`);
+    const rotateY = (px-0.5) * MAX_TILT * 2;
+    const rotateX = (0.5-py) * MAX_TILT * 2;
+    card.classList.add('tilting');
+    card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px) translateZ(0)`;
+  });
+  card.addEventListener('mouseleave', ()=>{
+    card.classList.remove('tilting');
+    card.style.transform = 'translateY(0)';
+  });
+});
+
+// 3D hero — rotating gem/icosahedron
+(function heroScene(){
+  const wrap = document.getElementById('hero3d');
+  const canvas = document.getElementById('hero3d-canvas');
+  if(!wrap || !canvas || typeof THREE === 'undefined') return;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+  camera.position.z = 4.2;
+
+  const renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+
+  function resize(){
+    const s = wrap.clientWidth;
+    renderer.setSize(s, s, false);
+    camera.aspect = 1;
+    camera.updateProjectionMatrix();
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // lighting for the metallic medallion
+  scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+  const keyLight = new THREE.DirectionalLight(0xffffff, 1.1);
+  keyLight.position.set(3,4,5);
+  scene.add(keyLight);
+  const rimLight = new THREE.DirectionalLight(0x2DD4BF, 0.6);
+  rimLight.position.set(-4,-2,-3);
+  scene.add(rimLight);
+  const warmLight = new THREE.PointLight(0xE4C766, 0.7, 10);
+  warmLight.position.set(-2,2,3);
+  scene.add(warmLight);
+
+  // ===== build face texture: engraved "K" + laurel-style border =====
+  function buildFaceTexture(){
+    const size = 512;
+    const c = document.createElement('canvas');
+    c.width = c.height = size;
+    const ctx = c.getContext('2d');
+    // base metallic gold fill
+    const grad = ctx.createRadialGradient(size*0.35,size*0.32,size*0.05,size*0.5,size*0.5,size*0.62);
+    grad.addColorStop(0,'#F5DFA0');
+    grad.addColorStop(0.45,'#E4C766');
+    grad.addColorStop(0.8,'#B8912A');
+    grad.addColorStop(1,'#8C6C1C');
+    ctx.fillStyle = grad;
+    ctx.beginPath(); ctx.arc(size/2,size/2,size*0.49,0,Math.PI*2); ctx.fill();
+
+    // outer rim ring
+    ctx.strokeStyle = 'rgba(20,16,10,0.55)';
+    ctx.lineWidth = size*0.018;
+    ctx.beginPath(); ctx.arc(size/2,size/2,size*0.465,0,Math.PI*2); ctx.stroke();
+
+    // dotted decorative ring
+    const dotCount = 48;
+    for(let i=0;i<dotCount;i++){
+      const a = (i/dotCount)*Math.PI*2;
+      const rr = size*0.415;
+      const dx = size/2 + Math.cos(a)*rr;
+      const dy = size/2 + Math.sin(a)*rr;
+      ctx.beginPath();
+      ctx.arc(dx,dy,size*0.006,0,Math.PI*2);
+      ctx.fillStyle = 'rgba(20,16,10,0.5)';
+      ctx.fill();
+    }
+
+    // inner thin ring
+    ctx.strokeStyle = 'rgba(20,16,10,0.35)';
+    ctx.lineWidth = size*0.006;
+    ctx.beginPath(); ctx.arc(size/2,size/2,size*0.36,0,Math.PI*2); ctx.stroke();
+
+    // engraved "K" letter
+    ctx.save();
+    ctx.translate(size/2, size/2);
+    ctx.font = `700 ${size*0.42}px "Playfair Display", Georgia, serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    // shadow (engraved depth)
+    ctx.fillStyle = 'rgba(20,16,10,0.5)';
+    ctx.fillText('K', size*0.015, size*0.03 + size*0.015);
+    // highlight top layer
+    ctx.fillStyle = '#FBF1D2';
+    ctx.fillText('K', -size*0.01, size*0.02 - size*0.01);
+    ctx.restore();
+
+    // curved brand text along bottom arc
+    ctx.save();
+    ctx.translate(size/2, size/2);
+    ctx.fillStyle = 'rgba(20,16,10,0.6)';
+    ctx.font = `600 ${size*0.048}px "JetBrains Mono", monospace`;
+    ctx.textAlign = 'center';
+    const text = 'K O D E E B O Y Z Z';
+    const radius = size*0.385;
+    const startAngle = Math.PI*0.5 + (text.length/2)*0.11;
+    for(let i=0;i<text.length;i++){
+      const angle = startAngle - i*0.11;
+      ctx.save();
+      ctx.rotate(Math.PI/2 - angle);
+      ctx.translate(0, -radius);
+      ctx.fillText(text[i], 0, 0);
+      ctx.restore();
+    }
+    ctx.restore();
+
+    const tex = new THREE.CanvasTexture(c);
+    tex.anisotropy = 4;
+    return tex;
+  }
+
+  const faceTex = buildFaceTexture();
+  const faceMat = new THREE.MeshStandardMaterial({map:faceTex, roughness:0.32, metalness:0.85});
+  const backMat = new THREE.MeshStandardMaterial({color:0xB8912A, roughness:0.4, metalness:0.8});
+  const edgeMat = new THREE.MeshStandardMaterial({color:0xC9A227, roughness:0.3, metalness:0.9});
+
+  // medallion body — cylinder with distinct face/back/edge materials
+  const coinGeo = new THREE.CylinderGeometry(1.5, 1.5, 0.28, 64);
+  const coin = new THREE.Mesh(coinGeo, [edgeMat, faceMat, backMat]);
+
+  // thin outer halo ring, aligned to the coin's face plane (XZ, since cylinder caps face ±Y)
+  const haloGeo = new THREE.TorusGeometry(1.62, 0.02, 8, 64);
+  const haloMat = new THREE.MeshStandardMaterial({color:0x2DD4BF, roughness:0.3, metalness:0.6, transparent:true, opacity:0.55});
+  const halo = new THREE.Mesh(haloGeo, haloMat);
+  halo.rotation.x = Math.PI/2;
+
+  // group holds a fixed 3/4 display tilt; the coin spins on its own local axis inside it
+  const coinGroup = new THREE.Group();
+  coinGroup.add(coin, halo);
+  coinGroup.rotation.x = -0.28;
+  coinGroup.rotation.z = 0.06;
+  scene.add(coinGroup);
+
+  // sparkle particles orbiting the medallion
+  const starCount = 60;
+  const starGeo = new THREE.BufferGeometry();
+  const positions = new Float32Array(starCount*3);
+  for(let i=0;i<starCount;i++){
+    const r = 2.1 + Math.random()*0.9;
+    const theta = Math.random()*Math.PI*2;
+    const phi = Math.acos((Math.random()*2)-1);
+    positions[i*3] = r*Math.sin(phi)*Math.cos(theta);
+    positions[i*3+1] = r*Math.sin(phi)*Math.sin(theta);
+    positions[i*3+2] = r*Math.cos(phi);
+  }
+  starGeo.setAttribute('position', new THREE.BufferAttribute(positions,3));
+  const starMat = new THREE.PointsMaterial({color:0xE4C766, size:0.045, transparent:true, opacity:0.9});
+  const stars = new THREE.Points(starGeo, starMat);
+  scene.add(stars);
+
+  let targetRotX = 0, targetRotY = 0;
+  wrap.addEventListener('mousemove', (e)=>{
+    const r = wrap.getBoundingClientRect();
+    const px = (e.clientX - r.left)/r.width - 0.5;
+    const py = (e.clientY - r.top)/r.height - 0.5;
+    targetRotY = px * 0.5;
+    targetRotX = py * 0.35;
+  });
+
+  let t = 0;
+  function animate(){
+    requestAnimationFrame(animate);
+    t += 0.004;
+    // coin spins on its own local face-normal axis — a true coin spin, not a tumble
+    coin.rotation.y = t * 1.4;
+    halo.rotation.z = t * 0.8;
+    // the whole group tilts gently with mouse parallax around its fixed 3/4 display angle
+    coinGroup.rotation.x = -0.28 + targetRotX;
+    coinGroup.rotation.y = targetRotY;
+    stars.rotation.y = t*0.2;
+    stars.rotation.x = -t*0.15;
+    renderer.render(scene, camera);
+  }
+  animate();
+})();
+
+// 3D Product Viewer — headphone model with color swatches + drag control
+(function productViewer(){
+  const canvas = document.getElementById('threeD-canvas');
+  const container = canvas ? canvas.closest('.threeD-container') : null;
+  if(!canvas || !container || typeof THREE === 'undefined') return;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
+  camera.position.set(0, 0.15, 3.6);
+  camera.lookAt(0,0,0);
+
+  const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+
+  function resize(){
+    const w = container.clientWidth;
+    const h = canvas.clientHeight || 540;
+    renderer.setSize(w, h, false);
+    camera.aspect = w/h;
+    camera.updateProjectionMatrix();
+  }
+
+  // lighting
+  scene.add(new THREE.AmbientLight(0xffffff, 0.55));
+  const key = new THREE.DirectionalLight(0xffffff, 0.9);
+  key.position.set(4,5,3);
+  scene.add(key);
+  const rim = new THREE.DirectionalLight(0x2DD4BF, 0.5);
+  rim.position.set(-4,2,-3);
+  scene.add(rim);
+  const warm = new THREE.PointLight(0xE4C766, 0.6, 12);
+  warm.position.set(-2,3,2);
+  scene.add(warm);
+
+  // ===== Headphone group (Sony / Harman Kardon style over-ear) =====
+  const hpGroup = new THREE.Group();
+  const shellMat = new THREE.MeshStandardMaterial({color:0x1C2521, roughness:0.32, metalness:0.55});
+  const cushionMat = new THREE.MeshStandardMaterial({color:0x141414, roughness:0.85, metalness:0.05});
+  const trimMat = new THREE.MeshStandardMaterial({color:0xE4C766, roughness:0.25, metalness:0.7});
+
+  // headband — smooth arch curve from ear to ear
+  const bandCurve = new THREE.CatmullRomCurve3([
+    new THREE.Vector3(-1.02, 0.35, 0),
+    new THREE.Vector3(-0.78, 0.98, 0),
+    new THREE.Vector3(0, 1.18, 0),
+    new THREE.Vector3(0.78, 0.98, 0),
+    new THREE.Vector3(1.02, 0.35, 0)
+  ]);
+  const bandGeo = new THREE.TubeGeometry(bandCurve, 32, 0.055, 12, false);
+  const band = new THREE.Mesh(bandGeo, shellMat);
+  hpGroup.add(band);
+
+  // slider rods connecting band ends to ear cups
+  const rodGeo = new THREE.CylinderGeometry(0.035, 0.035, 0.65, 12);
+  const rodL = new THREE.Mesh(rodGeo, trimMat);
+  rodL.position.set(-1.02, -0.02, 0);
+  const rodR = rodL.clone();
+  rodR.position.x = 1.02;
+  hpGroup.add(rodL, rodR);
+
+  // ear cups
+  function makeEarCup(){
+    const g = new THREE.Group();
+    const cup = new THREE.Mesh(new THREE.CylinderGeometry(0.42, 0.42, 0.26, 32), shellMat);
+    cup.rotation.z = Math.PI/2;
+    g.add(cup);
+    const cushion = new THREE.Mesh(new THREE.TorusGeometry(0.36, 0.075, 16, 32), cushionMat);
+    cushion.rotation.y = Math.PI/2;
+    cushion.position.x = 0.14;
+    g.add(cushion);
+    const trimRing = new THREE.Mesh(new THREE.TorusGeometry(0.42, 0.015, 8, 32), trimMat);
+    trimRing.rotation.y = Math.PI/2;
+    trimRing.position.x = 0.135;
+    g.add(trimRing);
+    return g;
+  }
+  const cupL = makeEarCup();
+  cupL.position.set(-1.02, -0.62, 0);
+  const cupR = makeEarCup();
+  cupR.position.set(1.02, -0.62, 0);
+  cupR.rotation.y = Math.PI;
+  hpGroup.add(cupL, cupR);
+
+  // headband cushion pad (top)
+  const padGeo = new THREE.BoxGeometry(0.7, 0.09, 0.16);
+  const pad = new THREE.Mesh(padGeo, cushionMat);
+  pad.position.set(0, 1.06, 0);
+  hpGroup.add(pad);
+
+  hpGroup.position.y = -0.05;
+  scene.add(hpGroup);
+
+  const shellMeshes = [band, cupL.children[0], cupR.children[0]];
+  const colorMap = { black:'#1C2521', gold:'#C9A227', green:'#2E5C3A' };
+
+  // interaction state
+  let autoRotate = true;
+  let dragging = false;
+  let lastX = 0, lastY = 0;
+  const DEFAULT_ROT = { y: 0.5, x: -0.05 };
+  let rotY = DEFAULT_ROT.y, rotX = DEFAULT_ROT.x;
+
+  function applyRotation(){
+    hpGroup.rotation.y = rotY;
+    hpGroup.rotation.x = rotX;
+  }
+  applyRotation();
+
+  canvas.addEventListener('pointerdown', (e)=>{
+    dragging = true; lastX = e.clientX; lastY = e.clientY;
+    canvas.setPointerCapture(e.pointerId);
+  });
+  canvas.addEventListener('pointermove', (e)=>{
+    if(!dragging) return;
+    const dx = e.clientX - lastX, dy = e.clientY - lastY;
+    lastX = e.clientX; lastY = e.clientY;
+    rotY += dx * 0.008;
+    rotX = Math.max(-0.8, Math.min(0.8, rotX + dy * 0.008));
+  });
+  canvas.addEventListener('pointerup', ()=>{ dragging = false; });
+  canvas.addEventListener('pointerleave', ()=>{ dragging = false; });
+
+  // Auto Rotate toggle
+  const autoRotateBtn = document.getElementById('autoRotateBtn');
+  if(autoRotateBtn){
+    autoRotateBtn.addEventListener('click', ()=>{
+      autoRotate = !autoRotate;
+      autoRotateBtn.classList.toggle('active', autoRotate);
+    });
+  }
+
+  // Reset View
+  const resetBtn = document.getElementById('resetBtn');
+  if(resetBtn){
+    resetBtn.addEventListener('click', ()=>{
+      rotY = DEFAULT_ROT.y; rotX = DEFAULT_ROT.x;
+      autoRotate = true;
+      if(autoRotateBtn) autoRotateBtn.classList.add('active');
+      document.querySelectorAll('.threeD-section .swatch').forEach(s=>s.classList.remove('active'));
+      const blackSwatch = document.querySelector('.threeD-section .swatch.black');
+      if(blackSwatch) blackSwatch.classList.add('active');
+      shellMeshes.forEach(m=>m.material.color.set(colorMap.black));
+    });
+  }
+
+  // color swatches
+  document.querySelectorAll('.threeD-section .swatch').forEach(sw=>{
+    sw.addEventListener('click', ()=>{
+      document.querySelectorAll('.threeD-section .swatch').forEach(s=>s.classList.remove('active'));
+      sw.classList.add('active');
+      const hex = colorMap[sw.dataset.color] || '#1C2521';
+      shellMeshes.forEach(m=>m.material.color.set(hex));
+    });
+  });
+
+  window.addEventListener('resize', resize);
+  resize();
+
+  function animate(){
+    requestAnimationFrame(animate);
+    if(autoRotate && !dragging){
+      rotY += 0.004;
+    }
+    applyRotation();
+    renderer.render(scene, camera);
+  }
+  animate();
+})();
+</script>
+
+</body>
+</html>
